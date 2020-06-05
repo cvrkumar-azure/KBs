@@ -142,5 +142,15 @@ git checkout -b feature-212
 
 
 
+### Delete a branch from local system and remote system
 
+```bash
+git push --delete <remote_name> <branch_name>
+```
+
+Example
+
+```bash
+git push --delete origin feature-xyz
+```
 
