@@ -1,5 +1,11 @@
 ## Docker installation
 
+
+Docker Engine is available for free as `docker-ce`. An enterprise edition also exists, which offers additional features and is available only on paid susbcription.
+
+Note: docker-ce cannot be installed on Redhat Enterprise Linux (RHEL), only  Docker Enterprise edition i.e., `docker-ee` can be installed on RHEL.
+
+
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc -y
 sudo apt-get update
@@ -18,6 +24,30 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
+
+## Installation on Centos
+
+```bash
+sudo yum remove -y docker \
+                   docker-client \
+                   docker-client-latest \
+                   docker-common \
+                   docker-latest \
+                   docker-latest-logrotate \
+                   docker-logrotate \
+                   docker-engine 
+
+sudo yum install -y yum-utils
+
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum-config-manager --enable docker-ce-nightly
+```
+
+
+Note: docker-ce is not available in Redhat
+
 
 
 Add the existing user to docker group to run docker commands without sudo
