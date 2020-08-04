@@ -41,13 +41,16 @@ shift+g     --> Takes to the bottom of the page
 
 gg      	--> Takes to the top of the page
 
-:set number --> View line numbers 
+:set number --> View line numbers
 
 :n          --> Takes you to the nth line.
 
-/<string>	--> To search for a string
+/string-to-search 	--> To search for a string
 
-:s//<string/>//<replacement/>/g  --> Searches string and replaces wiht the replacement on current line
+:s/string-to-search/string-to-replace/g  --> Searches string and replaces wiht the replacement on current line
+Ex: :s/tect/text/g
 
-:%s//<string/>//<replacement/>/g  --> Searches string and replaces wiht the replacement through out the file
 
+:%s/string-to-search/string-to-replace/g  --> Searches string and replaces wiht the replacement through out the file
+
+:set number            --> Sets the Line numbers
