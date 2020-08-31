@@ -70,6 +70,13 @@ To see all the previous commits
 git log
 ```
 
+Undo the change in the working area
+
+```bash
+git restore <Filename>
+```
+
+
 Revert to a previous commit
 
 ```bash
